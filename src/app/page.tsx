@@ -17,8 +17,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-maroon-900/80 via-maroon/40 to-transparent" />
         <div className="relative z-10 mx-auto max-w-6xl h-full px-4 flex flex-col justify-center text-white">
           <p className="uppercase tracking-widest text-orange-200 font-semibold mb-2">
-            We are LIVE!
+            We proudly donate 10% of our profit back to VT community! 
           </p>
+          <p>August's selected organization is: <a href="https://www.example.com">e-NABLE</a>a></p>
           <h1 className="text-4xl sm:text-5xl font-extrabold max-w-xl leading-tight">
             Care packages made with LOVE
           </h1>

@@ -21,8 +21,9 @@ export default function ContactPage() {
         <p className="text-sm text-gray-700 mt-1">
           <span className="font-semibold text-maroon">Phone:</span> {CONTACT_PHONE}
         </p>
-      </div>
       -->
+      </div>
+      
         
       {submitted ? (
         <div className="card p-6 bg-orange-50 border-orange-200 text-maroon-800 text-sm">

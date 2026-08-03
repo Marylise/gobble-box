@@ -15,7 +15,7 @@ export const PRODUCTS = [
   {
     tier: "BASIC" as const,
     name: "Basic Box",
-    price: 29.99,
+    price: 24.99,
     type: "one-time" as const,
     image: "/images/box-basic.jpg",
     description:
@@ -33,7 +33,7 @@ export const PRODUCTS = [
   {
     tier: "PREMIUM" as const,
     name: "Premium Box",
-    price: 59.99,
+    price: 69.99,
     type: "one-time" as const,
     image: "/images/box-premium.jpg",
     description:

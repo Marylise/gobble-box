@@ -51,5 +51,5 @@ export const PRODUCTS = [
   },
 ];
 
-export const CONTACT_EMAIL = "thegobblebox@gmail.com";
+export const CONTACT_EMAIL = "gobbleboxshop@gmail.com";
 export const CONTACT_PHONE = "(571) 524 3706";

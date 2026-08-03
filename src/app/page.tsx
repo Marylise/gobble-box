@@ -17,10 +17,10 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-maroon-900/80 via-maroon/40 to-transparent" />
         <div className="relative z-10 mx-auto max-w-6xl h-full px-4 flex flex-col justify-center text-white">
           <p className="uppercase tracking-widest text-orange-200 font-semibold mb-2">
-            [Banner photo placeholder — /public/images/banner.jpg]
+            We are LIVE!
           </p>
           <h1 className="text-4xl sm:text-5xl font-extrabold max-w-xl leading-tight">
-            Care packages for your Hokie, picked by you.
+            Care packages made with LOVE
           </h1>
           <p className="mt-4 max-w-lg text-white/90">
             Send your student the drinks and snacks they actually want — for the first week of

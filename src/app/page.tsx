@@ -55,7 +55,7 @@ export default function HomePage() {
             {
               step: "1",
               title: "Pick a box",
-              body: "Choose Basic, Premium, Ultimate, or the Premium subscription — no account required.",
+              body: "Choose Basic, Standard, Premium, or the Standard subscription. No account required.",
             },
             {
               step: "2",

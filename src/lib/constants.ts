@@ -35,7 +35,7 @@ export const PRODUCTS = [
     name: "Premium Box",
     price: 59.99,
     type: "one-time" as const,
-    image: "/images/box-Premium.jpg",
+    image: "/images/box-premium.jpg",
     description:
       "The top-shelf pick: premium drinks and snacks in bigger quantities, for parents who want to send the full care package experience.",
   },

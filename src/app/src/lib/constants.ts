@@ -5,7 +5,7 @@ export const SITE_NAME = "Gobble Box";
 
 // Shown as a promo strip on the home page, right under the banner.
 // Set to "" (empty string) to hide it.
-export const PROMO_MESSAGE = "For a limited time only: service fee waived";
+export const PROMO_MESSAGE = "For a limited time only, get 10% discount";
 
 // The 4 fixed occasions for the Premium subscription box.
 export const SUBSCRIPTION_OCCASIONS = ["Halloween", "Valentine's Day", "Easter", "Birthday"];

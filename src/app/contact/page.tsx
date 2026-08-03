@@ -13,16 +13,6 @@ export default function ContactPage() {
         Questions about an order, a subscription, or your student&apos;s box? Reach out.
       </p>
 
-      <div className="card p-6 mb-8">
-        <p className="text-sm text-gray-700">
-          <span className="font-semibold text-maroon">Echmail:</span> {CONTACT_EMAIL}
-        </p>
-        <p className="text-sm text-gray-700 mt-1">
-          <span className="font-semibold text-maroon">Phone:</span> {CONTACT_PHONE}
-        </p>
-      </div>
-      
-        
       {submitted ? (
         <div className="card p-6 bg-orange-50 border-orange-200 text-maroon-800 text-sm">
           Thanks for reaching out! We will contact you shortly. 

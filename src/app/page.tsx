@@ -23,8 +23,8 @@ export default function HomePage() {
             Care packages made with LOVE
           </h1>
           <p className="mt-4 max-w-lg text-white/90">
-            Send your student the drinks and snacks they actually want — for the first week of
-            school, holidays, or just because. No account needed.
+            Send your student the drinks and snacks they actually want for the first week of
+            school, holidays, their birthday, or just because. No account needed.
           </p>
           <div className="mt-6 flex gap-4">
             <Link href="/shop" className="btn-primary">

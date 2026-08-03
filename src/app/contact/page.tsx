@@ -50,9 +50,7 @@ export default function ContactPage() {
           <button type="submit" className="btn-primary w-full">
             Send Message
           </button>
-          <p className="text-xs text-gray-400">
-            Note: this form is not yet wired to an email service — messages are not delivered.
-          </p>
+
         </form>
       )}
     </div>

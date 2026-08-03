@@ -16,7 +16,7 @@ export default function ContactPage() {
       <!--
       <div className="card p-6 mb-8">
         <p className="text-sm text-gray-700">
-          <span className="font-semibold text-maroon">Ecmail:</span> {CONTACT_EMAIL}
+          <span className="font-semibold text-maroon">Echmail:</span> {CONTACT_EMAIL}
         </p>
         <p className="text-sm text-gray-700 mt-1">
           <span className="font-semibold text-maroon">Phone:</span> {CONTACT_PHONE}

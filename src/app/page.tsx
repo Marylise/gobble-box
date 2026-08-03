@@ -20,7 +20,15 @@ export default function HomePage() {
             We proudly donate 10% of our profit back to VT community! 
           </p>
           <p className="uppercase tracking-widest text-orange-200 font-semibold mb-2">
-            August's selected organization is: <a href="https://www.instagram.com/vt.enable/">e-NABLE</a></p>
+          August's selected organization is:{" "}
+            <a
+            href="https://www.instagram.com/vt.enable/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><u>
+    e-NABLE</u>
+  </a>
+</p>
           <h1 className="text-4xl sm:text-5xl font-extrabold max-w-xl leading-tight">
             Care packages made with LOVE
           </h1>

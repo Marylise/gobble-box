@@ -95,73 +95,82 @@ export default function ShopPage() {
       </div>
 
       {selectedProduct && (
-        <form onSubmit={handleSubmit} className="card p-6 space-y-6">
-          <div className="flex items-center justify-between">
-            <p className="text-sm text-gray-600">
-              {isSubscription ? "Subscribing to" : "Ordering the"}{" "}
-              <span className="font-semibold text-maroon">{selectedProduct.name}</span>
-            </p>
-            <button
-              type="button"
-              onClick={() => setSelectedTier(null)}
-              className="text-xs text-gray-400 hover:underline"
-            >
-              Change selection
-            </button>
-          </div>
-
-          {error && (
-            <div className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-md px-3 py-2">
-              {error}
-            </div>
-          )}
-
-          <ContactFields form={form} onChange={update} />
-
-          {isSubscription && (
-            <div>
-              <p className="text-sm font-medium text-gray-700 mb-1">
-                Student&apos;s Birthday{" "}
-                <span className="text-gray-400 font-normal">(needed for the Birthday box)</span>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-8 overflow-y-auto"
+          onClick={() => setSelectedTier(null)}
+        >
+          <form
+            onSubmit={handleSubmit}
+            onClick={(e) => e.stopPropagation()}
+            className="card p-6 space-y-6 w-full max-w-lg my-auto"
+          >
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-600">
+                {isSubscription ? "Subscribing to" : "Ordering the"}{" "}
+                <span className="font-semibold text-maroon">{selectedProduct.name}</span>
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <select
-                  required
-                  className="input-field"
-                  value={birthMonth}
-                  onChange={(e) => setBirthMonth(e.target.value)}
-                >
-                  <option value="">Month</option>
-                  {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
-                    <option key={m} value={m}>
-                      {new Date(2000, m - 1).toLocaleString("default", { month: "long" })}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  required
-                  className="input-field"
-                  value={birthDay}
-                  onChange={(e) => setBirthDay(e.target.value)}
-                >
-                  <option value="">Day</option>
-                  {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => (
-                    <option key={d} value={d}>
-                      {d}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedTier(null)}
+                className="text-xs text-gray-400 hover:underline"
+              >
+                Close
+              </button>
             </div>
-          )}
 
-          <button type="submit" disabled={loading} className="btn-primary w-full disabled:opacity-60">
-            {loading ? "Submitting..." : isSubscription ? "Start Subscription" : "Place Order"}
-          </button>
-          <p className="text-xs text-gray-400 text-center">
-            Payment isn&apos;t connected yet. We will charge you after we finalize the details.
-          </p>
-        </form>
+            {error && (
+              <div className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-md px-3 py-2">
+                {error}
+              </div>
+            )}
+
+            <ContactFields form={form} onChange={update} />
+
+            {isSubscription && (
+              <div>
+                <p className="text-sm font-medium text-gray-700 mb-1">
+                  Student&apos;s Birthday{" "}
+                  <span className="text-gray-400 font-normal">(needed for the Birthday box)</span>
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <select
+                    required
+                    className="input-field"
+                    value={birthMonth}
+                    onChange={(e) => setBirthMonth(e.target.value)}
+                  >
+                    <option value="">Month</option>
+                    {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+                      <option key={m} value={m}>
+                        {new Date(2000, m - 1).toLocaleString("default", { month: "long" })}
+                      </option>
+                    ))}
+                  </select>
+                  <select
+                    required
+                    className="input-field"
+                    value={birthDay}
+                    onChange={(e) => setBirthDay(e.target.value)}
+                  >
+                    <option value="">Day</option>
+                    {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => (
+                      <option key={d} value={d}>
+                        {d}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
+
+            <button type="submit" disabled={loading} className="btn-primary w-full disabled:opacity-60">
+              {loading ? "Submitting..." : isSubscription ? "Start Subscription" : "Place Order"}
+            </button>
+            <p className="text-xs text-gray-400 text-center">
+              Payment isn&apos;t connected yet. We will charge you after we finalize the details.
+            </p>
+          </form>
+        </div>
       )}
     </div>
   );

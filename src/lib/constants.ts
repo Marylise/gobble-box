@@ -35,7 +35,8 @@ export const PRODUCTS = [
     image: "/images/box-standard.jpg",
     description:
       "Our most popular box, and for good reason: a generous mix of the drinks and snacks your student actually wants.",
-    formUrl: undefined as string | undefined,
+    formUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLScHopNeML_H2-hsedQjeEGO_gxkINA8ETWZ-P6nDQHv2cGbiQ/viewform?embedded=true",
   },
   {
     tier: "PREMIUM" as const,
@@ -45,7 +46,8 @@ export const PRODUCTS = [
     image: "/images/box-premium.jpg",
     description:
       "The top-shelf pick: premium drinks and snacks in bigger quantities, for parents who want to send the full care package experience.",
-    formUrl: undefined as string | undefined,
+    formUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdCL_tuC0JgQeUG08k5kYVhcp1_wwGmm97VE1Jxn6BtjmSI-A/viewform?embedded=true",
   },
   {
     tier: "SUBSCRIPTION_STANDARD_4PACK" as const,
@@ -56,7 +58,8 @@ export const PRODUCTS = [
     description: `Four Standard Boxes delivered across the school year, timed to ${SUBSCRIPTION_OCCASIONS.join(
       ", "
     )}. Set it up once. We handle the rest.`,
-    formUrl: undefined as string | undefined,
+    formUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfd1g6hVykz7y9IKJasB8rNYso7SkE3oXZo98chfQH3BLS61Q/viewform?embedded=true",
   },
 ];
 

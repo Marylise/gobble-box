@@ -17,6 +17,7 @@ export default function ShopPage() {
 
   const selectedProduct = PRODUCTS.find((p) => p.tier === selectedTier);
   const isSubscription = selectedProduct?.type === "subscription";
+  const formUrl = selectedProduct?.formUrl;
 
   function update<K extends keyof ContactFormValues>(field: K, value: ContactFormValues[K]) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -94,7 +95,37 @@ export default function ShopPage() {
         ))}
       </div>
 
-      {selectedProduct && (
+      {selectedProduct && formUrl && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-8 overflow-y-auto"
+          onClick={() => setSelectedTier(null)}
+        >
+          <div onClick={(e) => e.stopPropagation()} className="card p-4 w-full max-w-lg my-auto">
+            <div className="flex items-center justify-between mb-2 px-2">
+              <p className="text-sm text-gray-600">
+                Ordering the <span className="font-semibold text-maroon">{selectedProduct.name}</span>
+              </p>
+              <button
+                type="button"
+                onClick={() => setSelectedTier(null)}
+                className="text-xs text-gray-400 hover:underline"
+              >
+                Close
+              </button>
+            </div>
+            <iframe
+              src={formUrl}
+              title={`${selectedProduct.name} Order Form`}
+              className="w-full rounded-md"
+              height={600}
+            >
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      )}
+
+      {selectedProduct && !formUrl && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-8 overflow-y-auto"
           onClick={() => setSelectedTier(null)}

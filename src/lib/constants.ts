@@ -50,6 +50,17 @@ export const PRODUCTS = [
       "https://docs.google.com/forms/d/e/1FAIpQLSdCL_tuC0JgQeUG08k5kYVhcp1_wwGmm97VE1Jxn6BtjmSI-A/viewform?embedded=true",
   },
   {
+    tier: "HALLOWEEN" as const,
+    name: "Halloween Box",
+    price: 59.99,
+    type: "one-time" as const,
+    image: "/images/Halloween.jpeg",
+    description:
+      "Remember racing door to door with a pillowcase full of candy? Send your student a little of that trick-or-treat magic, with spooky-season treats and snacks to celebrate Halloween, even from miles away.",
+    formUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeRnnV4Pxfz-d1YofGpISfRJtXld7LiXEkXCRu48l63Bke5RQ/viewform?embedded=true",
+  },
+  {
     tier: "SUBSCRIPTION_STANDARD_4PACK" as const,
     name: "Standard Box Subscription (4 Boxes)",
     price: 159.99,
